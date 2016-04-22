@@ -12,10 +12,10 @@ using LibCubeStart;
 
 namespace CubeStart8
 {
-    public partial class Form1 : MetroForm
+    public partial class MainForm : MetroForm
     {
         private GuiBackend _guiBackend;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             _guiBackend = new GuiBackend();
@@ -23,7 +23,7 @@ namespace CubeStart8
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            GuiBackend.Initialize();
         }
     }
 }
