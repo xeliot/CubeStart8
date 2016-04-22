@@ -1,6 +1,6 @@
 # CubeStart8
 
-![Logo][cubestart.png]
+![Logo](cubestart.png)
 
 Alternate launcher for Windows.
 
