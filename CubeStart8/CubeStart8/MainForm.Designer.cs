@@ -47,7 +47,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.googleItBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.weatherTxtBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -285,21 +286,35 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // webBrowser1
+            // weatherTxtBox
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(439, 200);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(506, 250);
-            this.webBrowser1.TabIndex = 39;
-            this.webBrowser1.Url = new System.Uri("https://www.google.com/search?q=weather", System.UriKind.Absolute);
+            this.weatherTxtBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weatherTxtBox.Location = new System.Drawing.Point(551, 300);
+            this.weatherTxtBox.Name = "weatherTxtBox";
+            this.weatherTxtBox.Size = new System.Drawing.Size(105, 34);
+            this.weatherTxtBox.TabIndex = 40;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.button1.ForeColor = System.Drawing.Color.Green;
+            this.button1.Location = new System.Drawing.Point(575, 210);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 46);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Get Weather";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(967, 605);
-            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.weatherTxtBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.googleItBox);
             this.Controls.Add(this.pictureBox3);
@@ -318,6 +333,7 @@
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox4);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "MainForm";
             this.Text = "CubeStart8";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -362,7 +378,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox googleItBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TextBox weatherTxtBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

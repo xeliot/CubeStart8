@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using LibCubeStart;
 using System.Diagnostics;
+using System.Net;
+using System.Xml;
 
 namespace CubeStart8
 {
@@ -26,9 +28,18 @@ namespace CubeStart8
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             GuiBackend.Initialize();
+            string weburl = "http://api.openweathermap.org/data/2.5/weather?q=" + weatherTxtBox.Text + "&mode=xml";
+
+            var xml = await new WebClient().DownloadStringTaskAsync(new Uri(weburl));
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml);
+            string szTemp = doc.DocumentElement.SelectSingleNode("temperature").Attributes["value"].Value;
+            double temp = double.Parse(szTemp) - 273.16;
+            weatherTxtBox.Text = temp.ToString("N2") + " Celcius";
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -284,6 +295,11 @@ namespace CubeStart8
             {
                 System.Diagnostics.Process.Start(paths[pictureBox16.Name]);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
