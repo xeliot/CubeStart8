@@ -32,7 +32,7 @@ namespace LibCubeStart
             _openFileDialog = new OpenFileDialog();
         }
 
-        public void OnPictureBoxClick(ref System.Windows.Forms.PictureBox currentPictureBox)
+        public void OnPictureBoxLeftClick(ref System.Windows.Forms.PictureBox currentPictureBox)
         {
             if (_paths[currentPictureBox.Name] == "")
             {

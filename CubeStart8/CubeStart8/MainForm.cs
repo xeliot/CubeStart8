@@ -32,29 +32,29 @@ namespace CubeStart8
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox1);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox1);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox2);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox2);
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox3);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox3);
         }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox4);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox4);
         }
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox7);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox7);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox5);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox5);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -78,52 +78,52 @@ namespace CubeStart8
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox6);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox6);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox8);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox8);
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox9);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox9);
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox10);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox10);
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox11);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox11);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox12);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox12);
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox13);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox13);
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox14);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox14);
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox15);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox15);
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            _guiBackend.OnPictureBoxClick(ref pictureBox16);
+            _guiBackend.OnPictureBoxLeftClick(ref pictureBox16);
         }
 
         private void button1_Click(object sender, EventArgs e)
