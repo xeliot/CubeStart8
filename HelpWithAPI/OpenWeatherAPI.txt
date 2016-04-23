@@ -1,0 +1,19 @@
+Open Weather Map API Info
+
+- Offers weather API across many cities
+
+http://openweathermap.org/api - for more info
+
+1. Retrieve Key from the Open Weather API subscription
+
+ - https://home.openweathermap.org/users/sign_up
+
+2. Open up MainForm.cs and go to txtCity_KeyDown event handler code
+
+3. In the line of code:
+
+	string appId = "37df39e9cf3691f2*********"
+
+   Please enter your own API Key
+
+4. Run and enjoy
