@@ -48,5 +48,13 @@ namespace LibCubeStart
                 System.Diagnostics.Process.Start(_paths[currentPictureBox.Name]);
             }
         }
+
+        public void OnPictureBoxRightClick(ref System.Windows.Forms.PictureBox currentPictureBox)
+        {
+            // remove path from paths dictionary
+            _paths[currentPictureBox.Name] = "";
+            //change picturebox image to the add symbol
+            currentPictureBox.Image = Image.FromFile(@"C:\Users\daveho8888\Documents\dave ho\programming\CubeStart8\CubeStart8\CubeStart8\Resources\add.png");
+        }
     }
 }
