@@ -14,6 +14,8 @@ namespace CubeStart8
 {
     public partial class MainForm : MetroForm
     {
+        Dictionary<string, string> paths = new Dictionary<string, string>();
+        paths.Add("1");
         private GuiBackend _guiBackend;
         public MainForm()
         {
