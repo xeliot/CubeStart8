@@ -328,7 +328,7 @@
             // lblCity_Country
             // 
             this.lblCity_Country.AutoSize = true;
-            this.lblCity_Country.Location = new System.Drawing.Point(600, 314);
+            this.lblCity_Country.Location = new System.Drawing.Point(600, 312);
             this.lblCity_Country.Name = "lblCity_Country";
             this.lblCity_Country.Size = new System.Drawing.Size(0, 20);
             this.lblCity_Country.TabIndex = 44;
@@ -336,7 +336,6 @@
             // 
             // flagPic
             // 
-            this.flagPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flagPic.Location = new System.Drawing.Point(500, 314);
             this.flagPic.Name = "flagPic";
             this.flagPic.Size = new System.Drawing.Size(26, 20);
@@ -346,7 +345,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(693, 314);
+            this.lblDescription.Location = new System.Drawing.Point(709, 310);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(0, 20);
             this.lblDescription.TabIndex = 46;
@@ -354,7 +353,6 @@
             // 
             // weatherPic
             // 
-            this.weatherPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.weatherPic.Location = new System.Drawing.Point(481, 332);
             this.weatherPic.Name = "weatherPic";
             this.weatherPic.Size = new System.Drawing.Size(45, 45);
@@ -365,7 +363,7 @@
             // lblTempMin
             // 
             this.lblTempMin.AutoSize = true;
-            this.lblTempMin.Location = new System.Drawing.Point(577, 361);
+            this.lblTempMin.Location = new System.Drawing.Point(591, 342);
             this.lblTempMin.Name = "lblTempMin";
             this.lblTempMin.Size = new System.Drawing.Size(0, 20);
             this.lblTempMin.TabIndex = 48;
@@ -374,7 +372,7 @@
             // lblTempMax
             // 
             this.lblTempMax.AutoSize = true;
-            this.lblTempMax.Location = new System.Drawing.Point(676, 361);
+            this.lblTempMax.Location = new System.Drawing.Point(695, 341);
             this.lblTempMax.Name = "lblTempMax";
             this.lblTempMax.Size = new System.Drawing.Size(0, 20);
             this.lblTempMax.TabIndex = 49;
@@ -383,7 +381,7 @@
             // lblTempDay
             // 
             this.lblTempDay.AutoSize = true;
-            this.lblTempDay.Location = new System.Drawing.Point(596, 412);
+            this.lblTempDay.Location = new System.Drawing.Point(590, 377);
             this.lblTempDay.Name = "lblTempDay";
             this.lblTempDay.Size = new System.Drawing.Size(0, 20);
             this.lblTempDay.TabIndex = 50;
@@ -391,7 +389,7 @@
             // lblTempNight
             // 
             this.lblTempNight.AutoSize = true;
-            this.lblTempNight.Location = new System.Drawing.Point(702, 412);
+            this.lblTempNight.Location = new System.Drawing.Point(703, 377);
             this.lblTempNight.Name = "lblTempNight";
             this.lblTempNight.Size = new System.Drawing.Size(0, 20);
             this.lblTempNight.TabIndex = 51;
@@ -399,7 +397,7 @@
             // lblHumidity
             // 
             this.lblHumidity.AutoSize = true;
-            this.lblHumidity.Location = new System.Drawing.Point(819, 412);
+            this.lblHumidity.Location = new System.Drawing.Point(834, 377);
             this.lblHumidity.Name = "lblHumidity";
             this.lblHumidity.Size = new System.Drawing.Size(0, 20);
             this.lblHumidity.TabIndex = 52;
@@ -410,12 +408,13 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(262, 26);
             this.txtCity.TabIndex = 53;
+            this.txtCity.Text = "Enter A City";
             this.txtCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyDown);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(548, 357);
+            this.label4.Location = new System.Drawing.Point(547, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 54;
@@ -424,7 +423,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(639, 361);
+            this.label5.Location = new System.Drawing.Point(646, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 20);
             this.label5.TabIndex = 55;
@@ -433,7 +432,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(545, 412);
+            this.label6.Location = new System.Drawing.Point(544, 377);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 56;
@@ -442,7 +441,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(640, 412);
+            this.label7.Location = new System.Drawing.Point(648, 377);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 20);
             this.label7.TabIndex = 57;
@@ -451,16 +450,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(743, 412);
+            this.label8.Location = new System.Drawing.Point(754, 377);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 20);
+            this.label8.Size = new System.Drawing.Size(74, 20);
             this.label8.TabIndex = 58;
-            this.label8.Text = "Humidity";
+            this.label8.Text = "Humidity:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(545, 314);
+            this.label9.Location = new System.Drawing.Point(545, 312);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 20);
             this.label9.TabIndex = 59;
