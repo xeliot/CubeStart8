@@ -58,7 +58,6 @@ namespace CubeStart8
                 System.Diagnostics.Process.Start(paths[pictureBox2.Name]);
             }
         }
-        
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             if (paths[pictureBox3.Name] == "")
@@ -72,6 +71,10 @@ namespace CubeStart8
             {
                 System.Diagnostics.Process.Start(paths[pictureBox3.Name]);
             }
+        }
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
