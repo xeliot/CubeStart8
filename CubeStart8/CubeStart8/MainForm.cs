@@ -12,10 +12,10 @@ using LibCubeStart;
 using System.Diagnostics;
 using System.Net;
 using System.Xml;
-
+using System.Web;
 namespace CubeStart8
 {
-    public partial class MainForm : MetroForm
+    partial class MainForm : MetroForm
     {
         private GuiBackend _guiBackend;
         Dictionary<string, string> paths = new Dictionary<string, string>();
@@ -28,18 +28,9 @@ namespace CubeStart8
             }
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             GuiBackend.Initialize();
-            string weburl = "http://api.openweathermap.org/data/2.5/weather?q=" + weatherTxtBox.Text + "&mode=xml";
-
-            var xml = await new WebClient().DownloadStringTaskAsync(new Uri(weburl));
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(xml);
-            string szTemp = doc.DocumentElement.SelectSingleNode("temperature").Attributes["value"].Value;
-            double temp = double.Parse(szTemp) - 273.16;
-            weatherTxtBox.Text = temp.ToString("N2") + " Celcius";
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -299,7 +290,44 @@ namespace CubeStart8
 
         private void button1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
+
+    }
+    public class WeatherInfo
+    {
+        public City city { get; set; }
+        public List<List> list { get; set; }
+    }
+
+    public class City
+    {
+        public string name { get; set; }
+        public string country { get; set; }
+    }
+
+    public class Temp
+    {
+        public double day { get; set; }
+        public double min { get; set; }
+        public double max { get; set; }
+        public double night { get; set; }
+    }
+
+    public class Weather
+    {
+        public string description { get; set; }
+        public string icon { get; set; }
+    }
+
+    public class List
+    {
+        public Temp temp { get; set; }
+        public int humidity { get; set; }
+        public List<Weather> weather { get; set; }
     }
 }

@@ -47,8 +47,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.googleItBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.weatherTxtBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -286,26 +285,14 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // weatherTxtBox
+            // label2
             // 
-            this.weatherTxtBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weatherTxtBox.Location = new System.Drawing.Point(551, 300);
-            this.weatherTxtBox.Name = "weatherTxtBox";
-            this.weatherTxtBox.Size = new System.Drawing.Size(105, 34);
-            this.weatherTxtBox.TabIndex = 40;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(575, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 46);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Get Weather";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "label2";
             // 
             // MainForm
             // 
@@ -313,8 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(967, 605);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.weatherTxtBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.googleItBox);
             this.Controls.Add(this.pictureBox3);
@@ -378,8 +364,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox googleItBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox weatherTxtBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
