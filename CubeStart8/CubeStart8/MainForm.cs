@@ -73,6 +73,8 @@ namespace CubeStart8
                 if (DialogResult.OK == openFileDialog1.ShowDialog())
                 {
                     paths[pictureBox3.Name] = openFileDialog1.FileName;
+                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
+                    pictureBox3.Image = ico.ToBitmap();
                 }
             }
             else
