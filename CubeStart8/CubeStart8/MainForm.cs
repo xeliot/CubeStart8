@@ -19,117 +19,42 @@ namespace CubeStart8
     partial class MainForm : MetroForm
     {
         private GuiBackend _guiBackend;
-        Dictionary<string, string> paths = new Dictionary<string, string>();
+        
         public MainForm()
         {
             InitializeComponent();
             _guiBackend = new GuiBackend();
-            for (var i=1; i<16; i++) {
-                paths.Add("pictureBox" + i.ToString(), "");
-            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GuiBackend.Initialize();
+            _guiBackend.Initialize();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox1.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox1.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox1.Image = ico.ToBitmap();
-                }
-            }
-            else {
-                System.Diagnostics.Process.Start(paths[pictureBox1.Name]);
-            }
-            
+            _guiBackend.OnPictureBoxClick(ref pictureBox1);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox2.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox2.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox2.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox2.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox2);
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox3.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox3.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox3.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox3.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox3);
         }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox4.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox4.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox4.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox4.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox4);
         }
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox7.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox7.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox7.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox7.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox7);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            if(paths[pictureBox5.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox5.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox5.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox5.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox5);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -153,172 +78,52 @@ namespace CubeStart8
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox6.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox6.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox6.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox6.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox6);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox8.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox8.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox8.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox8.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox8);
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox9.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox9.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox9.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox9.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox9);
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox10.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox10.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox10.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox10.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox10);
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox11.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox11.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox11.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox11.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox11);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox12.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox12.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox12.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox12.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox12);
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox13.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox13.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox13.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox13.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox13);
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox14.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox14.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox14.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox14.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox14);
         }
 
         private void pictureBox15_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox15.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox15.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox15.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox15.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox15);
         }
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
-            if (paths[pictureBox16.Name] == "")
-            {
-                if (DialogResult.OK == openFileDialog1.ShowDialog())
-                {
-                    paths[pictureBox16.Name] = openFileDialog1.FileName;
-                    Icon ico = Icon.ExtractAssociatedIcon(@openFileDialog1.FileName);
-                    pictureBox16.Image = ico.ToBitmap();
-                }
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(paths[pictureBox16.Name]);
-            }
+            _guiBackend.OnPictureBoxClick(ref pictureBox16);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -357,6 +162,12 @@ namespace CubeStart8
                 using (WebClient client = new WebClient())
                 {
                     string json = client.DownloadString(url);
+
+                    //below this is very ugly :(
+                    //Don't use JavaScriptSerializer
+                    //Use JSON.NET
+                    //Newtonsoft.Json
+
 
                     WeatherInfo weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherInfo>(json);
                     lblCity_Country.Text = weatherInfo.city.name + "," + weatherInfo.city.country;
