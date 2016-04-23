@@ -12,7 +12,8 @@ using LibCubeStart;
 using System.Diagnostics;
 using System.Net;
 using System.Xml;
-using System.Web;
+using System.Web.Script.Serialization;
+
 namespace CubeStart8
 {
     partial class MainForm : MetroForm
@@ -296,7 +297,54 @@ namespace CubeStart8
         {
 
         }
+        protected void GetWeatherInfo(object sender, EventArgs e)
+        {
+        }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTempMax_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string appId = "37df39e9cf3691f235d7ad2fed75b01b";
+                string url = string.Format("http://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", txtCity.Text.Trim(), appId);
+                using (WebClient client = new WebClient())
+                {
+                    string json = client.DownloadString(url);
+
+                    WeatherInfo weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherInfo>(json);
+                    lblCity_Country.Text = weatherInfo.city.name + "," + weatherInfo.city.country;
+                    flagPic.Load(string.Format("http://openweathermap.org/images/flags/{0}.png", weatherInfo.city.country.ToLower()));
+                    lblDescription.Text = weatherInfo.list[0].weather[0].description;
+                    weatherPic.Load(string.Format("http://openweathermap.org/img/w/{0}.png", weatherInfo.list[0].weather[0].icon));
+                    lblTempMin.Text = string.Format("{0}°С", Math.Round(weatherInfo.list[0].temp.min, 1));
+                    lblTempMax.Text = string.Format("{0}°С", Math.Round(weatherInfo.list[0].temp.max, 1));
+                    lblTempDay.Text = string.Format("{0}°С", Math.Round(weatherInfo.list[0].temp.day, 1));
+                    lblTempNight.Text = string.Format("{0}°С", Math.Round(weatherInfo.list[0].temp.night, 1));
+                    lblHumidity.Text = weatherInfo.list[0].humidity.ToString();
+                    //tblWeather.Visible = true;
+                }
+            }
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class WeatherInfo
     {

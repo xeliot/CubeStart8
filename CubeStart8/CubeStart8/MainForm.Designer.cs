@@ -48,6 +48,22 @@
             this.googleItBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCity_Country = new System.Windows.Forms.Label();
+            this.flagPic = new System.Windows.Forms.PictureBox();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.weatherPic = new System.Windows.Forms.PictureBox();
+            this.lblTempMin = new System.Windows.Forms.Label();
+            this.lblTempMax = new System.Windows.Forms.Label();
+            this.lblTempDay = new System.Windows.Forms.Label();
+            this.lblTempNight = new System.Windows.Forms.Label();
+            this.lblHumidity = new System.Windows.Forms.Label();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -64,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flagPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weatherPic)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -294,12 +312,177 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "label2";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label3.ForeColor = System.Drawing.Color.Green;
+            this.label3.Location = new System.Drawing.Point(584, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 38);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Weather Info";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCity_Country
+            // 
+            this.lblCity_Country.AutoSize = true;
+            this.lblCity_Country.Location = new System.Drawing.Point(560, 314);
+            this.lblCity_Country.Name = "lblCity_Country";
+            this.lblCity_Country.Size = new System.Drawing.Size(35, 20);
+            this.lblCity_Country.TabIndex = 44;
+            this.lblCity_Country.Text = "Null";
+            this.lblCity_Country.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // flagPic
+            // 
+            this.flagPic.Location = new System.Drawing.Point(500, 314);
+            this.flagPic.Name = "flagPic";
+            this.flagPic.Size = new System.Drawing.Size(26, 20);
+            this.flagPic.TabIndex = 45;
+            this.flagPic.TabStop = false;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(652, 314);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(35, 20);
+            this.lblDescription.TabIndex = 46;
+            this.lblDescription.Text = "Null";
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
+            // 
+            // weatherPic
+            // 
+            this.weatherPic.Location = new System.Drawing.Point(478, 332);
+            this.weatherPic.Name = "weatherPic";
+            this.weatherPic.Size = new System.Drawing.Size(48, 42);
+            this.weatherPic.TabIndex = 47;
+            this.weatherPic.TabStop = false;
+            // 
+            // lblTempMin
+            // 
+            this.lblTempMin.AutoSize = true;
+            this.lblTempMin.Location = new System.Drawing.Point(577, 361);
+            this.lblTempMin.Name = "lblTempMin";
+            this.lblTempMin.Size = new System.Drawing.Size(35, 20);
+            this.lblTempMin.TabIndex = 48;
+            this.lblTempMin.Text = "Null";
+            this.lblTempMin.Click += new System.EventHandler(this.label4_Click_1);
+            // 
+            // lblTempMax
+            // 
+            this.lblTempMax.AutoSize = true;
+            this.lblTempMax.Location = new System.Drawing.Point(676, 361);
+            this.lblTempMax.Name = "lblTempMax";
+            this.lblTempMax.Size = new System.Drawing.Size(35, 20);
+            this.lblTempMax.TabIndex = 49;
+            this.lblTempMax.Text = "Null";
+            this.lblTempMax.Click += new System.EventHandler(this.lblTempMax_Click);
+            // 
+            // lblTempDay
+            // 
+            this.lblTempDay.AutoSize = true;
+            this.lblTempDay.Location = new System.Drawing.Point(560, 412);
+            this.lblTempDay.Name = "lblTempDay";
+            this.lblTempDay.Size = new System.Drawing.Size(35, 20);
+            this.lblTempDay.TabIndex = 50;
+            this.lblTempDay.Text = "Null";
+            // 
+            // lblTempNight
+            // 
+            this.lblTempNight.AutoSize = true;
+            this.lblTempNight.Location = new System.Drawing.Point(693, 412);
+            this.lblTempNight.Name = "lblTempNight";
+            this.lblTempNight.Size = new System.Drawing.Size(35, 20);
+            this.lblTempNight.TabIndex = 51;
+            this.lblTempNight.Text = "Null";
+            // 
+            // lblHumidity
+            // 
+            this.lblHumidity.AutoSize = true;
+            this.lblHumidity.Location = new System.Drawing.Point(821, 412);
+            this.lblHumidity.Name = "lblHumidity";
+            this.lblHumidity.Size = new System.Drawing.Size(35, 20);
+            this.lblHumidity.TabIndex = 52;
+            this.lblHumidity.Text = "Null";
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(564, 254);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(262, 26);
+            this.txtCity.TabIndex = 53;
+            this.txtCity.Text = "Mumbai";
+            this.txtCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(545, 361);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 20);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Min";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(639, 361);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 20);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Max";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(477, 412);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 20);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "DayTemp";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(601, 412);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 20);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "NightTemp";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(734, 412);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 20);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "Humidity";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(967, 605);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.lblHumidity);
+            this.Controls.Add(this.lblTempNight);
+            this.Controls.Add(this.lblTempDay);
+            this.Controls.Add(this.lblTempMax);
+            this.Controls.Add(this.lblTempMin);
+            this.Controls.Add(this.weatherPic);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.flagPic);
+            this.Controls.Add(this.lblCity_Country);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.googleItBox);
@@ -319,7 +502,6 @@
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox4);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "MainForm";
             this.Text = "CubeStart8";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -339,6 +521,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flagPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weatherPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,6 +549,22 @@
         private System.Windows.Forms.TextBox googleItBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCity_Country;
+        private System.Windows.Forms.PictureBox flagPic;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.PictureBox weatherPic;
+        private System.Windows.Forms.Label lblTempMin;
+        private System.Windows.Forms.Label lblTempMax;
+        private System.Windows.Forms.Label lblTempDay;
+        private System.Windows.Forms.Label lblTempNight;
+        private System.Windows.Forms.Label lblHumidity;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 
