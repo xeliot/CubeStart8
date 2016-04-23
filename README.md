@@ -8,7 +8,7 @@ Alternate launcher for Windows.
 - shortcuts to certain apps
 - mini browser
 
-NOTE: 
+Prerequisites:
 - NewtonSoft.Json Nuget Package is required.
 - Your own API Key for OpenWeather is required.
 - EPFramework Nuget Package is required
