@@ -25,5 +25,10 @@ namespace CubeStart8
         {
             GuiBackend.Initialize();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("C:\\Users\\daveho8888\\Documents\\dave ho\\programming\\iphone.txt");
+        }
     }
 }
