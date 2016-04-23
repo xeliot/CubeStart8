@@ -165,5 +165,20 @@ namespace CubeStart8
                 System.Diagnostics.Process.Start(paths[pictureBox8.Name]);
             }
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            if (paths[pictureBox9.Name] == "")
+            {
+                if (DialogResult.OK == openFileDialog1.ShowDialog())
+                {
+                    paths[pictureBox9.Name] = openFileDialog1.FileName;
+                }
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(paths[pictureBox9.Name]);
+            }
+        }
     }
 }
