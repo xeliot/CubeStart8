@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using LibCubeStart;
+using System.Diagnostics;
 
 namespace CubeStart8
 {
@@ -103,6 +104,25 @@ namespace CubeStart8
             else
             {
                 System.Diagnostics.Process.Start(paths[pictureBox5.Name]);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Process.Start(Uri.EscapeUriString("https://www.google.com/search?q="+googleItBox.Text));
+                //Process.Start-ing a URL will open default browser
             }
         }
     }
