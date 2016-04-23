@@ -43,5 +43,20 @@ namespace CubeStart8
             }
             
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (paths[pictureBox2.Name] == "")
+            {
+                if (DialogResult.OK == openFileDialog1.ShowDialog())
+                {
+                    paths[pictureBox2.Name] = openFileDialog1.FileName;
+                }
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(paths[pictureBox2.Name]);
+            }
+        }
     }
 }
