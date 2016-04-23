@@ -89,7 +89,17 @@ namespace CubeStart8
         }
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
+            if (paths[pictureBox7.Name] == "")
+            {
+                if (DialogResult.OK == openFileDialog1.ShowDialog())
+                {
+                    paths[pictureBox7.Name] = openFileDialog1.FileName;
+                }
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(paths[pictureBox7.Name]);
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -138,6 +148,21 @@ namespace CubeStart8
             else
             {
                 System.Diagnostics.Process.Start(paths[pictureBox6.Name]);
+            }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            if (paths[pictureBox8.Name] == "")
+            {
+                if (DialogResult.OK == openFileDialog1.ShowDialog())
+                {
+                    paths[pictureBox8.Name] = openFileDialog1.FileName;
+                }
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(paths[pictureBox8.Name]);
             }
         }
     }
