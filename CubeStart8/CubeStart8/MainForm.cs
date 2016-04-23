@@ -14,13 +14,15 @@ namespace CubeStart8
 {
     public partial class MainForm : MetroForm
     {
-        Dictionary<string, string> paths = new Dictionary<string, string>();
-        paths.Add("1");
         private GuiBackend _guiBackend;
+        Dictionary<string, string> paths = new Dictionary<string, string>();
         public MainForm()
         {
             InitializeComponent();
             _guiBackend = new GuiBackend();
+            for (var i=1; i<16; i++) {
+                paths.Add("pictureBox" + i.ToString(), "");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
