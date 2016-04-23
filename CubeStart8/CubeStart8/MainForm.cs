@@ -29,14 +29,19 @@ namespace CubeStart8
         {
             GuiBackend.Initialize();
         }
-        //System.Diagnostics.Process.Start("C:\\Users\\daveho8888\\Documents\\dave ho\\programming\\iphone.txt");
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (DialogResult.OK == openFileDialog1.ShowDialog())
+            if (paths[pictureBox1.Name] == "")
             {
-                paths[pictureBox1.Name] = openFileDialog1.FileName;
+                if (DialogResult.OK == openFileDialog1.ShowDialog())
+                {
+                    paths[pictureBox1.Name] = openFileDialog1.FileName;
+                }
             }
-            MessageBox.Show(paths[pictureBox1.Name]);
+            else {
+                System.Diagnostics.Process.Start(paths[pictureBox1.Name]);
+            }
+            
         }
     }
 }
