@@ -125,5 +125,20 @@ namespace CubeStart8
                 //Process.Start-ing a URL will open default browser
             }
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (paths[pictureBox6.Name] == "")
+            {
+                if (DialogResult.OK == openFileDialog1.ShowDialog())
+                {
+                    paths[pictureBox6.Name] = openFileDialog1.FileName;
+                }
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(paths[pictureBox6.Name]);
+            }
+        }
     }
 }
