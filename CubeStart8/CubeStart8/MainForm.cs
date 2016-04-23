@@ -345,6 +345,11 @@ namespace CubeStart8
         {
 
         }
+
+        private void weatherPic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class WeatherInfo
     {

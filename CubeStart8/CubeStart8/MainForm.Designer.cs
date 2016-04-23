@@ -64,6 +64,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -327,15 +328,15 @@
             // lblCity_Country
             // 
             this.lblCity_Country.AutoSize = true;
-            this.lblCity_Country.Location = new System.Drawing.Point(560, 314);
+            this.lblCity_Country.Location = new System.Drawing.Point(600, 314);
             this.lblCity_Country.Name = "lblCity_Country";
-            this.lblCity_Country.Size = new System.Drawing.Size(35, 20);
+            this.lblCity_Country.Size = new System.Drawing.Size(0, 20);
             this.lblCity_Country.TabIndex = 44;
-            this.lblCity_Country.Text = "Null";
             this.lblCity_Country.Click += new System.EventHandler(this.label4_Click);
             // 
             // flagPic
             // 
+            this.flagPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flagPic.Location = new System.Drawing.Point(500, 314);
             this.flagPic.Name = "flagPic";
             this.flagPic.Size = new System.Drawing.Size(26, 20);
@@ -345,29 +346,29 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(652, 314);
+            this.lblDescription.Location = new System.Drawing.Point(693, 314);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(35, 20);
+            this.lblDescription.Size = new System.Drawing.Size(0, 20);
             this.lblDescription.TabIndex = 46;
-            this.lblDescription.Text = "Null";
             this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // weatherPic
             // 
-            this.weatherPic.Location = new System.Drawing.Point(478, 332);
+            this.weatherPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.weatherPic.Location = new System.Drawing.Point(481, 332);
             this.weatherPic.Name = "weatherPic";
-            this.weatherPic.Size = new System.Drawing.Size(48, 42);
+            this.weatherPic.Size = new System.Drawing.Size(45, 45);
             this.weatherPic.TabIndex = 47;
             this.weatherPic.TabStop = false;
+            this.weatherPic.Click += new System.EventHandler(this.weatherPic_Click);
             // 
             // lblTempMin
             // 
             this.lblTempMin.AutoSize = true;
             this.lblTempMin.Location = new System.Drawing.Point(577, 361);
             this.lblTempMin.Name = "lblTempMin";
-            this.lblTempMin.Size = new System.Drawing.Size(35, 20);
+            this.lblTempMin.Size = new System.Drawing.Size(0, 20);
             this.lblTempMin.TabIndex = 48;
-            this.lblTempMin.Text = "Null";
             this.lblTempMin.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // lblTempMax
@@ -375,37 +376,33 @@
             this.lblTempMax.AutoSize = true;
             this.lblTempMax.Location = new System.Drawing.Point(676, 361);
             this.lblTempMax.Name = "lblTempMax";
-            this.lblTempMax.Size = new System.Drawing.Size(35, 20);
+            this.lblTempMax.Size = new System.Drawing.Size(0, 20);
             this.lblTempMax.TabIndex = 49;
-            this.lblTempMax.Text = "Null";
             this.lblTempMax.Click += new System.EventHandler(this.lblTempMax_Click);
             // 
             // lblTempDay
             // 
             this.lblTempDay.AutoSize = true;
-            this.lblTempDay.Location = new System.Drawing.Point(560, 412);
+            this.lblTempDay.Location = new System.Drawing.Point(596, 412);
             this.lblTempDay.Name = "lblTempDay";
-            this.lblTempDay.Size = new System.Drawing.Size(35, 20);
+            this.lblTempDay.Size = new System.Drawing.Size(0, 20);
             this.lblTempDay.TabIndex = 50;
-            this.lblTempDay.Text = "Null";
             // 
             // lblTempNight
             // 
             this.lblTempNight.AutoSize = true;
-            this.lblTempNight.Location = new System.Drawing.Point(693, 412);
+            this.lblTempNight.Location = new System.Drawing.Point(702, 412);
             this.lblTempNight.Name = "lblTempNight";
-            this.lblTempNight.Size = new System.Drawing.Size(35, 20);
+            this.lblTempNight.Size = new System.Drawing.Size(0, 20);
             this.lblTempNight.TabIndex = 51;
-            this.lblTempNight.Text = "Null";
             // 
             // lblHumidity
             // 
             this.lblHumidity.AutoSize = true;
-            this.lblHumidity.Location = new System.Drawing.Point(821, 412);
+            this.lblHumidity.Location = new System.Drawing.Point(819, 412);
             this.lblHumidity.Name = "lblHumidity";
-            this.lblHumidity.Size = new System.Drawing.Size(35, 20);
+            this.lblHumidity.Size = new System.Drawing.Size(0, 20);
             this.lblHumidity.TabIndex = 52;
-            this.lblHumidity.Text = "Null";
             // 
             // txtCity
             // 
@@ -413,53 +410,61 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(262, 26);
             this.txtCity.TabIndex = 53;
-            this.txtCity.Text = "Mumbai";
             this.txtCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyDown);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(545, 361);
+            this.label4.Location = new System.Drawing.Point(548, 357);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 20);
+            this.label4.Size = new System.Drawing.Size(38, 20);
             this.label4.TabIndex = 54;
-            this.label4.Text = "Min";
+            this.label4.Text = "Min:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(639, 361);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 20);
+            this.label5.Size = new System.Drawing.Size(42, 20);
             this.label5.TabIndex = 55;
-            this.label5.Text = "Max";
+            this.label5.Text = "Max:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(477, 412);
+            this.label6.Location = new System.Drawing.Point(545, 412);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 20);
+            this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 56;
-            this.label6.Text = "DayTemp";
+            this.label6.Text = "Day:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(601, 412);
+            this.label7.Location = new System.Drawing.Point(640, 412);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 20);
+            this.label7.Size = new System.Drawing.Size(50, 20);
             this.label7.TabIndex = 57;
-            this.label7.Text = "NightTemp";
+            this.label7.Text = "Night:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(734, 412);
+            this.label8.Location = new System.Drawing.Point(743, 412);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 58;
             this.label8.Text = "Humidity";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(545, 314);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 20);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "Place:";
             // 
             // MainForm
             // 
@@ -467,6 +472,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(967, 605);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -565,6 +571,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 
