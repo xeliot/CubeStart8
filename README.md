@@ -11,5 +11,6 @@ Alternate launcher for Windows.
 NOTE: 
 - NewtonSoft.Json Nuget Package is required.
 - Your own API Key for OpenWeather is required.
+- EPFramework Nuget Package is required
 
 (c) 2016 the WhatCubes Team. All Rights Reserved.
