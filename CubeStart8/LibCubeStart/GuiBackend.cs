@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -32,8 +33,23 @@ namespace LibCubeStart
             _openFileDialog = new OpenFileDialog();
         }
 
-        public void OnPictureBoxLeftClick(ref System.Windows.Forms.PictureBox currentPictureBox)
+        public void OnPictureBoxClick(ref System.Windows.Forms.PictureBox currentPictureBox, EventArgs e)
         {
+            var mea = e as MouseEventArgs;
+            switch (mea.Button)
+            {
+                case MouseButtons.Left:
+                    OnPictureBoxLeftClick(ref currentPictureBox);
+                    break;
+                case MouseButtons.Right:
+                    OnPictureBoxRightClick(ref currentPictureBox);
+                    break;
+            }
+        }
+
+        public void OnPictureBoxLeftClick(ref PictureBox currentPictureBox)
+        {
+
             if (_paths[currentPictureBox.Name] == "")
             {
                 if (DialogResult.OK == _openFileDialog.ShowDialog())
