@@ -7,7 +7,7 @@ Alternate launcher for Windows.
 - Based on the windows 8 start menu for those who appreciate that style
 - shortcuts to apps
 - mini weather feature
-- mini browser
+- mini browser.
 
 Prerequisites:
 - NewtonSoft.Json Nuget Package is required.
