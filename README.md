@@ -13,6 +13,6 @@ Prerequisites:
 - NewtonSoft.Json Nuget Package is required.
 - Your own API Key for OpenWeather is required.
   - Access the Help folder for more information.
-- EPFramework Nuget Package is required
+- EPFramework Nuget Package is required.
 
 (c) 2016 the WhatCubes Team. All Rights Reserved.
